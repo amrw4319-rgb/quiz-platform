@@ -56,5 +56,171 @@ const ExamsData = [
       answer: 3
     }
   ]
-}
+},
+{
+    "id": 1,
+    "question": "Which plane that divides the body into upper and lower portions?",
+    "options": [
+      "a) Sagittal",
+      "b) Transverse",
+      "c) Coronal",
+      "d) Parasagittal"
+    ],
+    "answer": "b) Transverse"
+  },
+  {
+    "id": 2,
+    "question": "Which plane of section that divided body into equal right and left halves?",
+    "options": [
+      "a) Parasagittal",
+      "b) Horizontal",
+      "c) Sagittal",
+      "d) Coronal"
+    ],
+    "answer": "c) Sagittal"
+  },
+  {
+    "id": 3,
+    "question": "Coronal plane divides the body into ......... portions.",
+    "options": [
+      "a) Anterior and posterior",
+      "b) Medial and lateral",
+      "c) Right and left",
+      "d) Superior and inferior"
+    ],
+    "answer": "a) Anterior and posterior"
+  },
+  {
+    "id": 4,
+    "question": "Which a movement that decreases the angle between two body parts?",
+    "options": [
+      "a) Extension",
+      "b) Adduction",
+      "c) Flexion",
+      "d) Abduction"
+    ],
+    "answer": "c) Flexion"
+  },
+  {
+    "id": 5,
+    "question": "Which a movement that increases the angle between two body parts?",
+    "options": [
+      "a) Extension",
+      "b) Adduction",
+      "c) Flexion",
+      "d) Abduction"
+    ],
+    "answer": "a) Extension"
+  },
+  {
+    "id": 6,
+    "question": "Which movement moves a bone or limb away from the midline of the body?",
+    "options": [
+      "a) Flexion",
+      "b) Extension",
+      "c) Abduction",
+      "d) Adduction"
+    ],
+    "answer": "c) Abduction"
+  },
+  {
+    "id": 7,
+    "question": "Which movement moves a bone or limb toward the midline of the body?",
+    "options": [
+      "a) Flexion",
+      "b) Extension",
+      "c) Abduction",
+      "d) Adduction"
+    ],
+    "answer": "d) Adduction"
+  },
+  {
+    "id": 8,
+    "question": "Which directional term refers to a position nearer to the point of attachment or origin?",
+    "options": [
+      "a) Distal",
+      "b) Proximal",
+      "c) Lateral",
+      "d) Medial"
+    ],
+    "answer": "b) Proximal"
+  },
+  {
+    "id": 9,
+    "question": "Which directional term refers to a position farther from the point of attachment or origin?",
+    "options": [
+      "a) Distal",
+      "b) Proximal",
+      "c) Superior",
+      "d) Inferior"
+    ],
+    "answer": "a) Distal"
+  },
+  {
+    "id": 10,
+    "question": "Lying horizontally with the face and body facing upwards is called:",
+    "options": [
+      "a) Prone",
+      "b) Supine",
+      "c) Superior",
+      "d) Lateral"
+    ],
+    "answer": "b) Supine"
+  },
+  {
+    "id": 11,
+    "question": "Lying horizontally with the face and body facing downwards is called:",
+    "options": [
+      "a) Prone",
+      "b) Supine",
+      "c) Anterior",
+      "d) Medial"
+    ],
+    "answer": "a) Prone"
+  },
+  {
+    "id": 12,
+    "question": "Which directional term means closer to the head or upper part of the body?",
+    "options": [
+      "a) Inferior",
+      "b) Superior",
+      "c) Posterior",
+      "d) Ventral"
+    ],
+    "answer": "b) Superior"
+  },
+  {
+    "id": 13,
+    "question": "Which directional term means closer to the feet or lower part of the body?",
+    "options": [
+      "a) Inferior",
+      "b) Superior",
+      "c) Anterior",
+      "d) Proximal"
+    ],
+    "answer": "a) Inferior"
+  },
+  {
+    "id": 14,
+    "question": "Which directional term refers to the front of the body?",
+    "options": [
+      "a) Posterior",
+      "b) Anterior",
+      "c) Superior",
+      "d) Deep"
+    ],
+    "answer": "b) Anterior"
+  },
+  {
+    "id": 15,
+    "question": "Which directional term refers to the back of the body?",
+    "options": [
+      "a) Anterior",
+      "b) Posterior",
+      "c) Medial",
+      "d) Superficial"
+    ],
+    "answer": "b) Posterior"
+  }
+
 ];
