@@ -60,5 +60,24 @@ const ExamsData = [
                 answer: 2
             }
         ]
+    },
+    {
+        id: "exam-haneen",
+        title: "HANEEEEEEEEEN",
+        category: "HANEEN",
+        description: "HHHHHHHHHHHHH",
+        duration: "25 Mins",
+        questions: [
+            {
+                question: "WHO IS THE CUTEST GIRL EVER?",
+                options: ["HANEEN", "haneen", "Haneen", "HaNeeN"],
+                answer: 0
+            },
+            {
+                question: "WHO IS GOING TO BE THE BEST DOCTOR?",
+                options: ["HANEEN", "HANEEN", "HANEEN", "HANEEN"],
+                answer: 2
+            }
+        ]
     }
 ];
