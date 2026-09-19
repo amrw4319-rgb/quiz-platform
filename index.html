@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Exam Portal</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- تأكد أن اسم الملف بحروف صغيرة style.css لحل مشكلة Vercel -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-container">
+
+    <!-- 1. PROFILE SCREEN -->
+    <div id="profileScreen" class="screen-view">
+        <div class="profile-card">
+            <div class="badge-tag"><i class="fa-solid fa-user-doctor"></i> Medical Student Portal</div>
+            <h2>Create Your Student Profile</h2>
+            <p>Please enter your full name to access the examination portal.</p>
+            
+            <form id="profileForm" onsubmit="saveProfile(event)">
+                <div class="input-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="studentNameInput" placeholder="Enter your full name (e.g. Amr Elsayed)" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-xl" style="width: 100%;">
+                    Continue to Dashboard <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 2. DASHBOARD / EXAM SELECTION SCREEN -->
+    <div id="dashboardScreen" class="screen-view hidden">
+        <header class="dashboard-header">
+            <div>
+                <div class="badge-tag"><i class="fa-solid fa-hospital-user"></i> Candidate Dashboard</div>
+                <h1>Welcome back, <span id="displayStudentName" class="highlight-name">Student</span></h1>
+                <p class="quiz-subtitle">Select an examination module to start your assessment.</p>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="changeProfile()">
+                <i class="fa-solid fa-user-pen"></i> Change Profile
+            </button>
+        </header>
+
+        <div id="examsGrid" class="exams-grid"></div>
+    </div>
+
+    <!-- 3. QUIZ ENGINE SCREEN -->
+    <div id="quizScreen" class="screen-view hidden">
+        
+        <header class="quiz-header">
+            <div class="header-top-bar">
+                <button class="btn btn-outline btn-sm" onclick="returnToDashboard()">
+                    <i class="fa-solid fa-arrow-left"></i> Exit to Dashboard
+                </button>
+                <span class="candidate-badge"><i class="fa-solid fa-id-card"></i> Candidate: <strong id="quizCandidateName"></strong></span>
+            </div>
+            <h1 id="quizTitle">Exam Title</h1>
+        </header>
+
+        <!-- Result Card -->
+        <div id="resultBox" class="result-card hidden">
+            <div class="result-header">
+                <i class="fa-solid fa-award result-icon"></i>
+                <h3>Exam Performance Summary</h3>
+            </div>
+            
+            <div class="result-stats-grid">
+                <div class="stat-box">
+                    <span class="stat-label">Final Score</span>
+                    <span class="stat-value" id="scoreText">0 / 0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Percentage</span>
+                    <span class="stat-value highlight" id="percentText">0%</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Unanswered</span>
+                    <span class="stat-value warning" id="unansweredText">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Grade</span>
+                    <span class="stat-value badge-status" id="gradeBadge">Excellent</span>
+                </div>
+            </div>
+
+            <div class="result-actions">
+                <button id="showReviewBtn" class="btn btn-secondary">
+                    <i class="fa-solid fa-eye"></i> Show Answers & Review
+                </button>
+                <button id="restartBtn" class="btn btn-primary">
+                    <i class="fa-solid fa-rotate-right"></i> Retake Exam
+                </button>
+                <button class="btn btn-outline" onclick="returnToDashboard()">
+                    <i class="fa-solid fa-grip"></i> All Exams
+                </button>
+            </div>
+        </div>
+
+        <!-- Question Navigator -->
+        <div id="navigatorBox" class="navigator-container hidden">
+            <div class="navigator-title"><i class="fa-solid fa-compass"></i> Question Navigator:</div>
+            <div id="navigatorGrid" class="navigator-grid"></div>
+        </div>
+
+        <!-- Main Questions Area -->
+        <div id="quizBox" class="quiz-body"></div>
+
+        <!-- Controls Bar -->
+        <div class="controls-bar">
+            <button id="submitBtn" class="btn btn-success hidden">
+                <i class="fa-solid fa-check-double"></i> Submit Exam
+            </button>
+            <button id="menuBtn" class="btn btn-outline hidden" onclick="returnToDashboard()">
+                <i class="fa-solid fa-house"></i> Return to Dashboard
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- تضمين الملفات السليمة -->
+<script src="exams.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

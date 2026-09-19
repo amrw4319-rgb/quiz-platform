@@ -1,0 +1,301 @@
+let studentName = "";
+let currentExam = null;
+let currentQuestion = 0;
+let userAnswers = [];
+let userFlags = [];
+let isReviewMode = false;
+
+// 1. Safe LocalStorage Operations
+function setSavedName(name) {
+    try {
+        localStorage.setItem("med_student_name", name);
+    } catch (e) {
+        console.warn("LocalStorage space full or restricted:", e);
+    }
+}
+
+function getSavedName() {
+    try {
+        return localStorage.getItem("med_student_name");
+    } catch (e) {
+        return null;
+    }
+}
+
+// 2. Profile Logic
+function checkProfile() {
+    const savedName = getSavedName();
+    if (savedName) {
+        studentName = savedName;
+        showDashboard();
+    } else {
+        showScreen("profileScreen");
+    }
+}
+
+function saveProfile(e) {
+    if (e) e.preventDefault();
+    const input = document.getElementById("studentNameInput");
+    if (!input) return;
+
+    const nameValue = input.value.trim();
+    if (nameValue) {
+        studentName = nameValue;
+        setSavedName(studentName);
+        showDashboard();
+    }
+}
+
+function changeProfile() {
+    try {
+        localStorage.removeItem("med_student_name");
+    } catch (e) {}
+    
+    const input = document.getElementById("studentNameInput");
+    if (input) input.value = "";
+    showScreen("profileScreen");
+}
+
+// 3. Dashboard Logic
+function showDashboard() {
+    const nameDisplay = document.getElementById("displayStudentName");
+    if (nameDisplay) nameDisplay.innerText = studentName;
+    
+    renderExamsList();
+    showScreen("dashboardScreen");
+}
+
+function renderExamsList() {
+    const grid = document.getElementById("examsGrid");
+    if (!grid) return;
+    grid.innerHTML = "";
+
+    // الحماية من عدم وجود ملف exams.js
+    if (typeof ExamsData === "undefined" || !Array.isArray(ExamsData)) {
+        grid.innerHTML = `<p style="color: var(--danger); text-align:center; grid-column: 1/-1;">
+            <i class="fa-solid fa-triangle-exclamation"></i> Could not load exams data. Please ensure <strong>exams.js</strong> is correctly linked.
+        </p>`;
+        return;
+    }
+
+    ExamsData.forEach((exam) => {
+        const card = document.createElement("div");
+        card.className = "exam-card";
+        card.innerHTML = `
+            <div>
+                <span class="exam-category">${exam.category || 'General'}</span>
+                <h3>${exam.title}</h3>
+                <p>${exam.description || ''}</p>
+            </div>
+            <div class="exam-footer">
+                <span style="font-size:0.8rem; color: var(--text-muted);">
+                    <i class="fa-regular fa-clock"></i> ${exam.questions ? exam.questions.length : 0} Questions
+                </span>
+                <button class="btn btn-primary btn-sm" onclick="startExam('${exam.id}')">
+                    Start Exam <i class="fa-solid fa-play"></i>
+                </button>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
+}
+
+// 4. Quiz Logic
+function startExam(examId) {
+    if (typeof ExamsData === "undefined") return;
+    
+    currentExam = ExamsData.find(e => e.id === examId);
+    if (!currentExam) return;
+
+    currentQuestion = 0;
+    userAnswers = new Array(currentExam.questions.length).fill(null);
+    userFlags = new Array(currentExam.questions.length).fill(false);
+    isReviewMode = false;
+
+    document.getElementById("quizTitle").innerText = currentExam.title;
+    document.getElementById("quizCandidateName").innerText = studentName;
+
+    document.getElementById("resultBox").classList.add("hidden");
+    document.getElementById("submitBtn").classList.remove("hidden");
+    document.getElementById("navigatorBox").classList.remove("hidden");
+    document.getElementById("menuBtn").classList.add("hidden");
+
+    showScreen("quizScreen");
+    renderNavigator();
+    renderQuestion();
+}
+
+function renderNavigator() {
+    const grid = document.getElementById("navigatorGrid");
+    if (!grid || !currentExam) return;
+    grid.innerHTML = "";
+
+    currentExam.questions.forEach((_, idx) => {
+        const item = document.createElement("div");
+        item.className = `nav-item ${idx === currentQuestion ? 'current' : ''}`;
+        
+        if (userFlags[idx]) {
+            item.classList.add("flagged");
+        } else if (userAnswers[idx] !== null) {
+            item.classList.add("answered");
+        }
+
+        item.innerText = idx + 1;
+        item.onclick = () => {
+            currentQuestion = idx;
+            renderQuestion();
+            renderNavigator();
+        };
+        grid.appendChild(item);
+    });
+}
+
+function renderQuestion() {
+    if (!currentExam) return;
+    let q = currentExam.questions[currentQuestion];
+
+    let html = `
+    <div class="nav-buttons-top">
+        <button class="btn btn-secondary" onclick="prevQuestion()" style="flex:1"><i class="fa-solid fa-arrow-left"></i> Previous</button>
+        <button class="btn btn-secondary" onclick="nextQuestion()" style="flex:1">Next <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <div class="question-meta">
+        <span>Question ${currentQuestion + 1} of ${currentExam.questions.length}</span>
+        ${!isReviewMode ? `
+        <button class="flag-btn ${userFlags[currentQuestion] ? 'active' : ''}" onclick="toggleFlag()">
+            <i class="fa-solid fa-bookmark"></i> ${userFlags[currentQuestion] ? 'Flagged' : 'Flag Question'}
+        </button>
+        ` : ''}
+    </div>
+
+    <h4 class="question-title">${q.question}</h4>
+    <div class="options-list">
+    `;
+
+    q.options.forEach((opt, i) => {
+        let selectedClass = userAnswers[currentQuestion] === i ? "selected" : "";
+        let reviewClass = "";
+
+        if (isReviewMode) {
+            if (i === q.answer) {
+                reviewClass = "correct";
+            } else if (userAnswers[currentQuestion] === i) {
+                reviewClass = "wrong";
+            }
+        }
+
+        html += `
+        <div class="option-card ${selectedClass} ${reviewClass}" onclick="selectOption(${i})">
+            <span style="font-weight:700; margin-right:10px;">${String.fromCharCode(65 + i)}.</span>
+            <span>${opt}</span>
+        </div>
+        `;
+    });
+
+    html += `</div>`;
+    document.getElementById("quizBox").innerHTML = html;
+}
+
+function selectOption(index) {
+    if (isReviewMode) return;
+    userAnswers[currentQuestion] = index;
+    renderQuestion();
+    renderNavigator();
+}
+
+function toggleFlag() {
+    userFlags[currentQuestion] = !userFlags[currentQuestion];
+    renderQuestion();
+    renderNavigator();
+}
+
+function nextQuestion() {
+    if (!currentExam) return;
+    currentQuestion = (currentQuestion + 1) % currentExam.questions.length;
+    renderQuestion();
+    renderNavigator();
+}
+
+function prevQuestion() {
+    if (!currentExam) return;
+    currentQuestion = (currentQuestion - 1 + currentExam.questions.length) % currentExam.questions.length;
+    renderQuestion();
+    renderNavigator();
+}
+
+function submitQuiz() {
+    if (!currentExam) return;
+    let score = 0;
+    let unanswered = 0;
+
+    currentExam.questions.forEach((q, index) => {
+        if (userAnswers[index] === null) {
+            unanswered++;
+        } else if (userAnswers[index] === q.answer) {
+            score++;
+        }
+    });
+
+    let percentage = Math.round((score / currentExam.questions.length) * 100);
+
+    document.getElementById("scoreText").innerText = `${score} / ${currentExam.questions.length}`;
+    document.getElementById("percentText").innerText = `${percentage}%`;
+    document.getElementById("unansweredText").innerText = unanswered;
+
+    let grade = "Excellent";
+    if (percentage < 60) grade = "Needs Improvement";
+    else if (percentage < 75) grade = "Good";
+    else if (percentage < 85) grade = "Very Good";
+    
+    document.getElementById("gradeBadge").innerText = grade;
+
+    document.getElementById("resultBox").classList.remove("hidden");
+    document.getElementById("quizBox").innerHTML = `
+        <div style="text-align:center; padding: 40px 20px; color: var(--text-muted);">
+            <i class="fa-solid fa-circle-check" style="font-size:3rem; color:var(--success); margin-bottom:15px;"></i>
+            <h3>Exam Submitted Successfully!</h3>
+            <p>Click "Show Answers & Review" above to review your results.</p>
+        </div>
+    `;
+
+    document.getElementById("submitBtn").classList.add("hidden");
+    document.getElementById("navigatorBox").classList.add("hidden");
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function triggerReview() {
+    isReviewMode = true;
+    currentQuestion = 0;
+    document.getElementById("navigatorBox").classList.remove("hidden");
+    document.getElementById("menuBtn").classList.remove("hidden");
+    renderNavigator();
+    renderQuestion();
+}
+
+function returnToDashboard() {
+    showDashboard();
+}
+
+function showScreen(screenId) {
+    document.querySelectorAll('.screen-view').forEach(s => s.classList.add('hidden'));
+    const target = document.getElementById(screenId);
+    if (target) target.classList.remove('hidden');
+}
+
+// Safe Single Event Initialization
+document.addEventListener("DOMContentLoaded", function() {
+    checkProfile();
+
+    const submitBtn = document.getElementById("submitBtn");
+    if (submitBtn) submitBtn.onclick = submitQuiz;
+
+    const showReviewBtn = document.getElementById("showReviewBtn");
+    if (showReviewBtn) showReviewBtn.onclick = triggerReview;
+
+    const restartBtn = document.getElementById("restartBtn");
+    if (restartBtn) restartBtn.onclick = function() { 
+        if (currentExam) startExam(currentExam.id); 
+    };
+});
