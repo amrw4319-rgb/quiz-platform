@@ -5,12 +5,12 @@ let userAnswers = [];
 let userFlags = [];
 let isReviewMode = false;
 
-// 1. Safe LocalStorage Operations
+// Safe LocalStorage Operations
 function setSavedName(name) {
     try {
         localStorage.setItem("med_student_name", name);
     } catch (e) {
-        console.warn("LocalStorage space full or restricted:", e);
+        console.warn("LocalStorage unavailable:", e);
     }
 }
 
@@ -22,7 +22,7 @@ function getSavedName() {
     }
 }
 
-// 2. Profile Logic
+// Profile Logic
 function checkProfile() {
     const savedName = getSavedName();
     if (savedName) {
@@ -34,9 +34,9 @@ function checkProfile() {
 }
 
 function saveProfile(e) {
-    if (e) e.preventDefault();
+    if (e) e.preventDefault(); // منع إعادة تحميل الصفحة
     const input = document.getElementById("studentNameInput");
-    if (!input) return;
+    if (!input) return false;
 
     const nameValue = input.value.trim();
     if (nameValue) {
@@ -44,6 +44,7 @@ function saveProfile(e) {
         setSavedName(studentName);
         showDashboard();
     }
+    return false;
 }
 
 function changeProfile() {
@@ -56,7 +57,7 @@ function changeProfile() {
     showScreen("profileScreen");
 }
 
-// 3. Dashboard Logic
+// Dashboard Logic
 function showDashboard() {
     const nameDisplay = document.getElementById("displayStudentName");
     if (nameDisplay) nameDisplay.innerText = studentName;
@@ -70,10 +71,9 @@ function renderExamsList() {
     if (!grid) return;
     grid.innerHTML = "";
 
-    // الحماية من عدم وجود ملف exams.js
     if (typeof ExamsData === "undefined" || !Array.isArray(ExamsData)) {
-        grid.innerHTML = `<p style="color: var(--danger); text-align:center; grid-column: 1/-1;">
-            <i class="fa-solid fa-triangle-exclamation"></i> Could not load exams data. Please ensure <strong>exams.js</strong> is correctly linked.
+        grid.innerHTML = `<p style="color: #ef4444; text-align:center; grid-column: 1/-1; padding: 20px;">
+            <i class="fa-solid fa-triangle-exclamation"></i> لم يتم تحميل بيانات الامتحانات. تأكد من ربط ملف <strong>exams.js</strong>.
         </p>`;
         return;
     }
@@ -100,7 +100,7 @@ function renderExamsList() {
     });
 }
 
-// 4. Quiz Logic
+// Quiz Core
 function startExam(examId) {
     if (typeof ExamsData === "undefined") return;
     
@@ -284,9 +284,14 @@ function showScreen(screenId) {
     if (target) target.classList.remove('hidden');
 }
 
-// Safe Single Event Initialization
+// Initial Listener Setup
 document.addEventListener("DOMContentLoaded", function() {
     checkProfile();
+
+    const profileForm = document.getElementById("profileForm");
+    if (profileForm) {
+        profileForm.onsubmit = saveProfile;
+    }
 
     const submitBtn = document.getElementById("submitBtn");
     if (submitBtn) submitBtn.onclick = submitQuiz;
