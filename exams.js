@@ -1251,7 +1251,254 @@ const ExamsData = [
         question: "16. Ribosomal RNA is formed in:",
         options: ["heterochromatin", "euchromatin", "nucleolus", "Golgi apparatus", "Mitochondria"],
         answer: 2
-      }
+      },
+      {
+    "id": "carbohydrates_01",
+    "section": "Carbohydrates",
+    "subsection": "Monosaccharides",
+    "question_number": 1,
+    "question": "The sugar found in DNA is:",
+    "options": {
+      "a": "ribose.",
+      "b": "deoxyribose.",
+      "c": "xylose.",
+      "d": "ribulose."
+    },
+    "answer": "b"
+  },
+  {
+    "id": "carbohydrates_02",
+    "section": "Carbohydrates",
+    "subsection": "Monosaccharides",
+    "question_number": 2,
+    "question": "A carbohydrate found in milk is:",
+    "options": {
+      "a": "lactose",
+      "b": "sucrose",
+      "c": "maltose",
+      "d": "starch"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "carbohydrates_03",
+    "section": "Carbohydrates",
+    "subsection": "Monosaccharides",
+    "question_number": 3,
+    "question": "is sugar of semen:",
+    "options": {
+      "a": "glucose.",
+      "b": "Mannose.",
+      "c": "fructose.",
+      "d": "galactose."
+    },
+    "answer": "c"
+  },
+  {
+    "id": "carbohydrates_04",
+    "section": "Carbohydrates",
+    "subsection": "Monosaccharides",
+    "question_number": 4,
+    "question": "Isomers differing as a result of variations in configuration of the -OH and -H on carbon atoms 2, 3 and 4 of glucose are known as:",
+    "options": {
+      "a": "Epimers",
+      "b": "Anomers",
+      "c": "Optical isomers",
+      "d": "L and D forms"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "carbohydrates_05",
+    "section": "Carbohydrates",
+    "subsection": "Monosaccharides",
+    "question_number": 5,
+    "question": "Digitalis is considered as:",
+    "options": {
+      "a": "Glycosides.",
+      "b": "Sugar acid.",
+      "c": "Amino sugar.",
+      "d": "Deoxribose"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "carbohydrates_06",
+    "section": "Carbohydrates",
+    "subsection": "Monosaccharides",
+    "question_number": 6,
+    "question": "The sugar found in RNA is:",
+    "options": {
+      "a": "ribose.",
+      "b": "deoxyribose.",
+      "c": "xylose.",
+      "d": "ribulose."
+    },
+    "answer": "a"
+  },
+  {
+    "id": "carbohydrates_07",
+    "section": "Carbohydrates",
+    "subsection": "Monosaccharides",
+    "question_number": 7,
+    "question": "All monosaccharides contain asymmetric carbon atom except:",
+    "options": {
+      "a": "glucose",
+      "b": "glyceraldehyde",
+      "c": "dihydroxyacetone",
+      "d": "fructose"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "carbohydrates_08",
+    "section": "Carbohydrates",
+    "subsection": "Monosaccharides",
+    "question_number": 8,
+    "question": "Which of the following are not epimers?",
+    "options": {
+      "a": "glucose and mannose",
+      "b": "glucose and galactose",
+      "c": "mannose and galactose"
+    },
+    "answer": "c"
+  },
+  {
+    "id": "carbohydrates_09",
+    "section": "Carbohydrates",
+    "subsection": "Monosaccharides",
+    "question_number": 9,
+    "question": "General formula of monosaccharides is:",
+    "options": {
+      "a": "Cn-H2n-On",
+      "b": "Cn-H2n-O",
+      "c": "Cn-Hn-On"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "carbohydrates_10",
+    "section": "Carbohydrates",
+    "subsection": "Monosaccharides",
+    "question_number": 10,
+    "question": "Which of the following carbohydrates is a triose?",
+    "options": {
+      "a": "Glucose",
+      "b": "Ribose",
+      "c": "Ribulose",
+      "d": "Glyceraldehyde"
+    },
+    "answer": "d"
+  },
+  {
+    "id": "carbohydrates_11",
+    "section": "Carbohydrates",
+    "subsection": "Monosaccharides",
+    "question_number": 11,
+    "question": "The smallest monosaccharide is:",
+    "options": {
+      "a": "Glucose",
+      "b": "Glyceraldehyde",
+      "c": "Ribose"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "carbohydrates_12",
+    "section": "Carbohydrates",
+    "subsection": "Monosaccharides",
+    "question_number": 12,
+    "question": "The most common monosaccharides are:",
+    "options": {
+      "a": "Trioses",
+      "b": "Hexoses",
+      "c": "Pentose"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "lipids_01",
+    "section": "Lipid",
+    "subsection": "Fatty Acids",
+    "question_number": 1,
+    "question": "All of the following have 18 carbon atoms except:",
+    "options": {
+      "a": "Linoleic acid",
+      "b": "Palmitic acid",
+      "c": "Linolenic acid",
+      "d": "Stearic acid"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "lipids_02",
+    "section": "Lipid",
+    "subsection": "Fatty Acids",
+    "question_number": 2,
+    "question": "Which of the following is essential fatty acid?",
+    "options": {
+      "a": "Linoleic",
+      "b": "Stearic acid",
+      "c": "Arachidonic acid",
+      "d": "Oleic acid"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "protein_01",
+    "section": "Protein",
+    "subsection": "Amino Acids",
+    "question_number": 1,
+    "question": "Valine, leucine and isoleucine are:",
+    "options": {
+      "a": "Non essential amino acids",
+      "b": "Branched chain amino acids",
+      "c": "Sulfur containing amino acids",
+      "d": "Basic amino acids"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "nucleic_acids_01",
+    "section": "Nucleic Acids",
+    "subsection": "General",
+    "question_number": 1,
+    "question": "Bonds that stabilize DNA structure:",
+    "options": {
+      "a": "ester",
+      "b": "Ionic",
+      "c": "glycosidic",
+      "d": "peptide"
+    },
+    "answer": "a"
+  },
+  {
+    "id": "enzymes_01",
+    "section": "Enzymes",
+    "subsection": "General",
+    "question_number": 1,
+    "question": "Allopurinol is a competitive inhibitor of:",
+    "options": {
+      "a": "Dihydrofolate reductase",
+      "b": "Xanthine oxidase",
+      "c": "Carbonic anhydrase",
+      "d": "None of the above"
+    },
+    "answer": "b"
+  },
+  {
+    "id": "vitamins_01",
+    "section": "Vitamins",
+    "subsection": "Vitamin A & E",
+    "question_number": 1,
+    "question": "Which of the following is a fat soluble vitamin:",
+    "options": {
+      "a": "vitamin B12",
+      "b": "vitamin C",
+      "c": "vitamin A"
+    },
+    "answer": "c"
+  }
     ]
   }
 ];
