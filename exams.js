@@ -3995,5 +3995,766 @@ const ExamsData = [
         answer: 3
       }
     ]
+      },
+      {
+    id: "exam-1",
+    title: "Anatomy MCQs - Dr. Wagih El-Husseiny",
+    category: "Anatomy",
+    description: "Complete multiple choice questions covering Anatomical Terminology, Movements, Bones, Muscles, and Joints.",
+    questions: [
+      {
+        question: "1. Which answer describe the anatomical position :",
+        options: [
+          "a. Standing erect, facing forward, arms at side, palms facing to the side.",
+          "b. Standing erect, facing forward, arms at side, palms facing forward.",
+          "c. Standing erect, facing forward, arms at side, palms facing back.",
+          "d. Standing erect, facing forward, arms at side, palms facing outward."
+        ],
+        answer: 1
+      },
+      {
+        question: "2. Which of the following is NOT true of a sagittal plane :",
+        options: [
+          "a. A sagittal section is dividing the body into right and left parts.",
+          "b. A sagittal section divides the body into anterior and posterior parts.",
+          "c. A midsagittal plane divides the body into equal right and left parts.",
+          "d. A median plane is another name for a midsagittal plane.",
+          "e. Both the sagittal and coronal planes represent a cut made along a lengthwise plane."
+        ],
+        answer: 1
+      },
+      {
+        question: "3. Which of the following planes separate the abdominal cavity from the thoracic cavity",
+        options: [
+          "a. Transverse plane.",
+          "b. Median (midsagittal) plane.",
+          "c. Coronal plane.",
+          "d. Parasagittal plane."
+        ],
+        answer: 0
+      },
+      {
+        question: "4. The major cavities include all of the following EXCEPT:",
+        options: [
+          "a. Cranial cavity.",
+          "b. Vertebral cavity.",
+          "c. Orbital cavity.",
+          "d. Abdominopelvic cavity."
+        ],
+        answer: 2
+      },
+      {
+        question: "5. Male reproductive system include:",
+        options: [
+          "a. Testis.",
+          "b. Penis.",
+          "c. Prostate",
+          "d. All of the above."
+        ],
+        answer: 3
+      },
+      {
+        question: "6. Renal system include:",
+        options: [
+          "a. Kidney.",
+          "b. Cecum.",
+          "c. Rectum.",
+          "d. All of the above."
+        ],
+        answer: 0
+      },
+      {
+        question: "7. The arms is ...........the forearm:",
+        options: [
+          "a. Proximal.",
+          "b. Distal.",
+          "c. Medial.",
+          "d. Lateral."
+        ],
+        answer: 0
+      },
+      {
+        question: "8. The plane which divides the body into 2 halves is called ........",
+        options: [
+          "a. Coronal.",
+          "b. Sagittal",
+          "c. Transverse.",
+          "d. Longitudinal."
+        ],
+        answer: 1
+      },
+      {
+        question: "9. Which term is defined as being close to the origin of the body part or the point of attachment of a limb to the body trunk",
+        options: [
+          "a. Superior, cranial, or cephalad.",
+          "b. Intermediate.",
+          "c. Distal.",
+          "d. Proximal."
+        ],
+        answer: 3
+      },
+      {
+        question: "10. The anatomical term meaning close to the point of attachment of a limb to the body trunk is",
+        options: [
+          "a. Distal.",
+          "b. inferior.",
+          "c. Lateral.",
+          "d. Proximal."
+        ],
+        answer: 3
+      },
+      {
+        question: "11. The anatomnical term meaning farther from the point of attachment of a limb to the body trunk is",
+        options: [
+          "a. Distal.",
+          "b. Inferior.",
+          "c. Lateral.",
+          "d. Medial."
+        ],
+        answer: 0
+      },
+      {
+        question: "12. Mr. Magdy has pruritus on his left shoulder. He put his right hand over to his left shoulder to scratch that itch. Which movement is occuring at his right elbow joint?",
+        options: [
+          "a. Extension",
+          "b. Circumduction.",
+          "c. Flexion.",
+          "d. pronation"
+        ],
+        answer: 2
+      },
+      {
+        question: "13. What is flexion?",
+        options: [
+          "a. Movement of the ventral surfaces away from each other.",
+          "b. Movement of the ventral surfaces towards each other.",
+          "c. Rotation of a body part around its longitudinal axis.",
+          "d. Sequential flexion, abduction, extension, and adduction."
+        ],
+        answer: 1
+      },
+      {
+        question: "14. Mr. Omar puts his hands at his side. Which movement occurs at the shoulder joint",
+        options: [
+          "a. Adduction.",
+          "b. Abduction.",
+          "c. Medial Rotation",
+          "d. Supination"
+        ],
+        answer: 0
+      },
+      {
+        question: "15. What is opposition?",
+        options: [
+          "a. Movement of the ventral surfaces towards each other.",
+          "b. Movement of the ventral surfaces away from each other.",
+          "c. Rotation of a body part around its longitudinal axis.",
+          "d. The palmar surface of the distal phalanx of the thumb with faces thoseof the other fingers."
+        ],
+        answer: 3
+      },
+      {
+        question: "16. The cheeks are........... to the tongue",
+        options: [
+          "a. proximal",
+          "b. lateral.",
+          "c. medial",
+          "d. inferior"
+        ],
+        answer: 1
+      },
+      {
+        question: "17. What is pronation?",
+        options: [
+          "a. The sole of the foot turns to the inner side or medially.",
+          "b. The sole of the foot turns to the outer side or laterally.",
+          "c. The palm of the hand turns backwards.",
+          "d. The palm of the hand turns forwards."
+        ],
+        answer: 2
+      },
+      {
+        question: "18. Which statement is correct?",
+        options: [
+          "a. The ear is medial to the eye",
+          "b. The chin is anterior to the nose",
+          "c. The elbow is distal to the wrist",
+          "d. The hip is proximal to the ankle."
+        ],
+        answer: 3
+      },
+      {
+        question: "19. What is retraction?",
+        options: [
+          "a. Forward movement.",
+          "b. Backward movement.",
+          "c. Movement of the ventral surfaces towards each other.",
+          "d. Movement of the ventral surfaces away from each other."
+        ],
+        answer: 1
+      },
+      {
+        question: "20. What is adduction?",
+        options: [
+          "a. Movement of the limb towards the midline of the body.",
+          "b. Movement of the limb away from the midline of the body.",
+          "c. Rotation of a body part around its longitudinal axis.",
+          "d. Sequential flexion, abduction, extension, and adduction."
+        ],
+        answer: 0
+      },
+      {
+        question: "21. Which bone is an example of the flat bone?",
+        options: [
+          "a. tibia",
+          "b. patella",
+          "c. Scapula",
+          "d. Humerus"
+        ],
+        answer: 2
+      },
+      {
+        question: "22. What is the function of sesamoid bones?",
+        options: [
+          "a. To separate the epiphysis from the diaphysis.",
+          "b. To allow growth of the bone in length.",
+          "c. To prevent friction of tendon with joints.",
+          "d. To provide strength to the bone."
+        ],
+        answer: 2
+      },
+      {
+        question: "23. The axial- skeleton is formed of the following bones EXCEPT:",
+        options: [
+          "a. Vertebral column.",
+          "b. Femur.",
+          "c. Skull.",
+          "d. Sternum."
+        ],
+        answer: 1
+      },
+      {
+        question: "24. Which of the following is not a bone of upper extremities:",
+        options: [
+          "a. Humerus.",
+          "b. Femur.",
+          "c. Radius",
+          "d. Clavicle."
+        ],
+        answer: 1
+      },
+      {
+        question: "25. Which of the following not a function of bones:",
+        options: [
+          "a. Support.",
+          "b. Breakdown of proteins into amino acids.",
+          "c. Movement.",
+          "d. Storage of minerals."
+        ],
+        answer: 1
+      },
+      {
+        question: "26. The pneumatic bones are called so because they contain:",
+        options: [
+          "a. Rich bone marrow.",
+          "b. Rich lymph.",
+          "c. Numerous bone cells.",
+          "d. Cavities with air.",
+          "e. Cavities filled with serous fluid."
+        ],
+        answer: 3
+      },
+      {
+        question: "27. The largest sesamoid bone is the:",
+        options: [
+          "a. Patella.",
+          "b. Tibia.",
+          "c. Scapula.",
+          "d. Maxilla."
+        ],
+        answer: 0
+      },
+      {
+        question: "28. The bones of skull cap classified as examples of:",
+        options: [
+          "a. Flat bones.",
+          "b. Short bones.",
+          "c. Long bones.",
+          "d. Irregular bones."
+        ],
+        answer: 0
+      },
+      {
+        question: "29. Which of the following statements about bones is false?",
+        options: [
+          "a. It's the site of blood cell formation.",
+          "b. It's rich in lymphatics.",
+          "c. It stores minerals as calcium and phosphorus.",
+          "d. It provides lever action for the muscles at the joints."
+        ],
+        answer: 1
+      },
+      {
+        question: "30. The function of pneumatic bones is all of the following except:",
+        options: [
+          "a. To decrease weight of the skull.",
+          "b. To nourish the adjacent structures.",
+          "c. To provide resonance of voice.",
+          "d. To regulate the temperature around the brain."
+        ],
+        answer: 1
+      },
+      {
+        question: "31. What is the function of spongy bone?",
+        options: [
+          "a. To separate the epiphysis from the diaphysis.",
+          "b. To allow growth of the bone in length.",
+          "c. To provide strength to the bone",
+          "d. To enclose large spaces filled with red bone marrow"
+        ],
+        answer: 3
+      },
+      {
+        question: "32. Which of the following is voluntary muscles :",
+        options: [
+          "a. Cardiac.",
+          "b. Smooth muscle.",
+          "c. Skeletal muscle.",
+          "d. None of the above."
+        ],
+        answer: 2
+      },
+      {
+        question: "33. The smooth muscle present in all of the following except:",
+        options: [
+          "a. Git.",
+          "b. Urinary bladder.",
+          "c. Myocardium.",
+          "d. Blood vessels."
+        ],
+        answer: 2
+      },
+      {
+        question: "34. A definition \"flat, sheet-like connective tissue which attaches a muscle to bone or cartilage\" is referred to:",
+        options: [
+          "a. Tendon.",
+          "b. aponeurosis.",
+          "c. Belly.",
+          "d. Epimysium."
+        ],
+        answer: 1
+      },
+      {
+        question: "35. What is the function of skeletal muscles?",
+        options: [
+          "a. To form the walls of the viscera.",
+          "b. To form the wall of the heart.",
+          "c. To attach to the skeleton and move the bones.",
+          "d. None of the above."
+        ],
+        answer: 2
+      },
+      {
+        question: "36. Which type of muscle is voluntary?",
+        options: [
+          "a. Skeletal muscles.",
+          "b. Smooth muscles.",
+          "c. Cardiac muscles.",
+          "d. None of the above."
+        ],
+        answer: 0
+      },
+      {
+        question: "37. What is the contractile part of the skeletal muscle called?",
+        options: [
+          "a. Belly.",
+          "b. Tendon.",
+          "c. Aponeurosis.",
+          "d. All of the above."
+        ],
+        answer: 0
+      },
+      {
+        question: "38. What is the function of retinaculum?",
+        options: [
+          "a. Connect muscles to bones or cartilage.",
+          "b. Connect bones to bones or cartilage.",
+          "c. Hold a structure in place in the region of joints.",
+          "d. Facilitate movement by minimizing friction."
+        ],
+        answer: 2
+      },
+      {
+        question: "39. Which type of muscle forms the walls of the viscera?",
+        options: [
+          "a. Skeletal muscles.",
+          "b. Smooth muscles.",
+          "c. Cardiac muscles.",
+          "d. All of the above."
+        ],
+        answer: 1
+      },
+      {
+        question: "40. What is the function of deep fascia?",
+        options: [
+          "a. Limit the spread of pus and extravasated fluids.",
+          "b. Connect muscles to bones or cartilage.",
+          "c. Connect bones to bones or cartilage.",
+          "d. Serve as an elastic sheath or stocking for muscles."
+        ],
+        answer: 3
+      },
+      {
+        question: "41. Which type of muscle forms the wall of the heart?",
+        options: [
+          "a. Skeletal muscles.",
+          "b. Smooth muscles.",
+          "c. Cardiac muscles"
+        ],
+        answer: 2
+      },
+      {
+        question: "42. What is the fibrous part of the skeletal muscle called?",
+        options: [
+          "a. Belly.",
+          "b. Tendon.",
+          "c. Aponeurosis."
+        ],
+        answer: 1
+      },
+      {
+        question: "43. What is the function of tendons?",
+        options: [
+          "a. Connect muscles to bones or cartilage.",
+          "b. Connect bones to bones or cartilage.",
+          "c. Hold a structure in place in the region of joints.",
+          "d. Facilitate movement by minimizing friction."
+        ],
+        answer: 0
+      },
+      {
+        question: "44. What is the function of ligaments?",
+        options: [
+          "a. Connect muscles to bones or cartilage.",
+          "b. Connect bones to bones or cartilage.",
+          "c. Hold a structure in place in the region of joints.",
+          "d. Facilitate movement by minimizing friction"
+        ],
+        answer: 1
+      },
+      {
+        question: "45. A joint found at the end of long bones that are movable, and contains a joint cavity would be:",
+        options: [
+          "a. Synovial joint.",
+          "b. Epithelial joint.",
+          "c. Articular joint.",
+          "d. Fibrous joint."
+        ],
+        answer: 0
+      },
+      {
+        question: "46. The elbow joint is considered a type of:",
+        options: [
+          "a. Pivote joint.",
+          "b. Hinge joint.",
+          "c. Saddle joint.",
+          "d. Plane joint."
+        ],
+        answer: 1
+      },
+      {
+        question: "47. The joints between bones of the skull are called:",
+        options: [
+          "a. Sutures.",
+          "b. Secondary cartilaginous.",
+          "c. Hinge.",
+          "d. synovial."
+        ],
+        answer: 0
+      },
+      {
+        question: "48. The only temporary joint is:",
+        options: [
+          "a. Gomphosis.",
+          "b. Secondary cartilaginous.",
+          "c. Primary cartilaginous.",
+          "d. Plane synovial."
+        ],
+        answer: 2
+      },
+      {
+        question: "49. The synovial joint has the following characters, except:",
+        options: [
+          "a. Allow a considerable range of movement.",
+          "b. Their articular surfaces are covered by elastic cartilage.",
+          "c. Covered by a capsule.",
+          "d. Minimal synovial fluid within its cavity."
+        ],
+        answer: 1
+      },
+      {
+        question: "50. The intervertebral disc articulates the bodies of the adjacent vertebrae. It's an example of:",
+        options: [
+          "a. Primary cartilaginous joint.",
+          "b. Secondary cartilaginous joint.",
+          "c. Fibrous joint.",
+          "d. Hinge synovial joint."
+        ],
+        answer: 1
+      },
+      {
+        question: "51. The most fixed type of joints which doesn't allow any range of movement and no hope in it to do so is:",
+        options: [
+          "a. Syndesmosis.",
+          "b. Primary cartilaginous.",
+          "c. Secondary cartilaginous.",
+          "d. Sutures."
+        ],
+        answer: 1
+      },
+      {
+        question: "52. The following types of synovial joints allow adduction, abduction, flexion, extension, medial and lateral rotation and circumduction:",
+        options: [
+          "a. Pivot.",
+          "b. Hinge.",
+          "c. Ball and socket.",
+          "d. Plane."
+        ],
+        answer: 2
+      },
+      {
+        question: "53. The xiphi-sternal junction is considered as",
+        options: [
+          "a. Fibrous joint.",
+          "b. Primary cartilaginous joint.",
+          "c. Secondary cartilaginous joint.",
+          "d. Synovial joint."
+        ],
+        answer: 2
+      },
+      {
+        question: "54. The example for pivote joint is",
+        options: [
+          "a. Elbow joint.",
+          "b. Inter-osseous membrane.",
+          "c. Superior radio-ulnar joint.",
+          "d. Shoulder joint."
+        ],
+        answer: 2
+      },
+      {
+        question: "55. A synovial membrane .....",
+        options: [
+          "a. Surrounds the joint cavity.",
+          "b. Secretes synovial fluid.",
+          "c. Lubricates the joint.",
+          "d. All of the above."
+        ],
+        answer: 3
+      },
+      {
+        question: "56. Concerning the synovial joints, the following are correct EXCEPT:",
+        options: [
+          "a. The articular surfaces are covered by hyaline cartilage.",
+          "b. The joint is surrounded by a capsule.",
+          "c. It contains extracapsular and/or intracapsular ligaments.",
+          "d. Separated from the surrounding tendons by bursae.",
+          "e. Also, the articular surfaces are covered by synovial membrane."
+        ],
+        answer: 4
+      },
+      {
+        question: "57. Shoulder joint and hip joint are:",
+        options: [
+          "a. Synovial joints.",
+          "b. Fibrous joints.",
+          "c. Primary cartilaginous joints.",
+          "d. Secondary cartilaginous joints."
+        ],
+        answer: 0
+      },
+      {
+        question: "58. The elbow joint is an example of:",
+        options: [
+          "a. biaxial ellipsoid synovial joint.",
+          "b. Ball and socket synovial joint.",
+          "c. Uniaxial pivot synovial joint.",
+          "d. Uniaxial hing synovial joint."
+        ],
+        answer: 3
+      },
+      {
+        question: "59. Characters of synovial joints are the following EXCEPT:",
+        options: [
+          "a. The articular surfaces are covered by hyaline cartilage.",
+          "b. The articular surfaces are connected by fibrous tissue.",
+          "c. There is a synovial fluid in the joint cavity.",
+          "d. It-may be simple or compound."
+        ],
+        answer: 1
+      },
+      {
+        question: "60. Sutures between the bones ol the skull represent a type of joints which Is:",
+        options: [
+          "a. primary carlilaginous.",
+          "b. Secondary cartilaginous.",
+          "c. Fibrous.",
+          "d. ellipsoid synoviat.",
+          "e. plane synovial."
+        ],
+        answer: 2
+      },
+      {
+        question: "61. 17-years-old boy falls on his outstretched arm his physician examined him for any loss of movement the boy failed to bring his palm facing forward. Which term describe this movement?",
+        options: [
+          "a. Adduction.",
+          "b. Abduction.",
+          "c. Pronation.",
+          "d. supination"
+        ],
+        answer: 3
+      },
+      {
+        question: "62. Sutures between the bones of the skull represent a type of joints which is:",
+        options: [
+          "a. primary cartilaginous.",
+          "b. secondary cartilaginous.",
+          "c. Fibrous.",
+          "d. plane synovial."
+        ],
+        answer: 2
+      },
+      {
+        question: "63. The joints which allow increase in length of long bones are termed.....",
+        options: [
+          "a. primary cartilaginous.",
+          "b. secondary cartilaginous.",
+          "c. fibrous.",
+          "d. plane synovial"
+        ],
+        answer: 0
+      },
+      {
+        question: "64. The hip joint is:",
+        options: [
+          "a. Biaxial synovial joint.",
+          "b. Ball and socket synovial joint.",
+          "c. Pivot synovial joint.",
+          "d. Hing synovial joint."
+        ],
+        answer: 1
+      },
+      {
+        question: "65. Which of the following joints is located on the skull?",
+        options: [
+          "a. Pivot.",
+          "b. Suture.",
+          "c. ball and socket.",
+          "d. Hinge."
+        ],
+        answer: 1
+      },
+      {
+        question: "66. A fibrous joint in which the bones are held together by an interosseous ligament is a(n)",
+        options: [
+          "a. Syndesmosis.",
+          "b. Suture.",
+          "c. Symphysis.",
+          "d. Diarthrosis."
+        ],
+        answer: 0
+      },
+      {
+        question: "67. The most fixed type of joints which does allow any range of movement and there is no hope in it to do so is;",
+        options: [
+          "a. Syndesmosis.",
+          "b. Primary cartilaginous.",
+          "c. Secondary cartilaginous.",
+          "d. Plane synovial."
+        ],
+        answer: 1
+      },
+      {
+        question: "68. The joints which allow Increase in length of long bones are termed",
+        options: [
+          "a. primary cartilaginous.",
+          "b. secondary cartilaginous.",
+          "c. Fibrous.",
+          "d. plane synovial."
+        ],
+        answer: 0
+      },
+      {
+        question: "69. 21-year-old woman walks in with a shoulder and arm injury after falling during horseback riding. Examination indicate that she cannot adduct his arm. What is the type of the joint responsible on this movement?",
+        options: [
+          "a. Pivot.",
+          "b. Hinge.",
+          "c. Ball and socket.",
+          "d. Saddle."
+        ],
+        answer: 2
+      },
+      {
+        question: "70. what is the type of interphalangeal Joints ?",
+        options: [
+          "a. Pivot.",
+          "b. Saddle.",
+          "c. Hinge.",
+          "d. Ellipsoid."
+        ],
+        answer: 2
+      },
+      {
+        question: "71. The classification of joints dependent on material present between the articulating bone and joint cavity. Which of the following joint has a cavity?",
+        options: [
+          "a. Gomphosis.",
+          "b. Inter-tarsal joints.",
+          "c. Middle radio-ulnar joint.",
+          "d. Symphysis pubis."
+        ],
+        answer: 1
+      },
+      {
+        question: "72. A 18-year-old girl patient complains of weakness when she extends her forearm. What is the type of the affected joint?",
+        options: [
+          "a. Ellipsoid.",
+          "b. Hinge.",
+          "c. Pivot.",
+          "d. Saddle."
+        ],
+        answer: 1
+      },
+      {
+        question: "73. A 33-year-old male feels severe pain when he tries to rotatc his forearm. A physician realizes that the problem is in his pivot joint. Which of the following joints would most likely be examined?",
+        options: [
+          "a. Carpometacarpal joint.",
+          "b. Middle radio ulnar joint.",
+          "c. Proximal tibiafibular joint.",
+          "d. Superior radioulnar joint."
+        ],
+        answer: 3
+      },
+      {
+        question: "74. What is the type of cartilage present in 1ry cartilaginous joint?",
+        options: [
+          "a. Collagen.",
+          "b. Elastic.",
+          "c. Fibrocartilage.",
+          "d. Hyaline."
+        ],
+        answer: 3
+      },
+      {
+        question: "75. Which type of joints of the interosseous membrane between the bones of the forearm and those of the leg?",
+        options: [
+          "a. Fibrous joints.",
+          "b. primary cartilaginous.",
+          "c. secandary cartilaginous.",
+          "d. plane synovial."
+        ],
+        answer: 0
+      }
+      
+    ]
   }
 ];
