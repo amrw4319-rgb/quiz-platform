@@ -3439,47 +3439,47 @@ const ExamsData = [
     description: "شامل لكل أسئلة الفيتامينات الذائبة في الدهون والذائبة في الماء وأسئلة حالات النقص وأهم أسئلة الامتحانات",
     questions: [
       {
-        question: "Vit A&E Q1) Which of the following is a fat soluble vitamin:",
+        question: " Q1) Which of the following is a fat soluble vitamin:",
         options: ["a) vitamin B12", "b) vitamin C", "c) vitamin A"],
         answer: 2
       },
       {
-        question: "Vit A&E Q2) Deficiency of ... leads to night blindness:",
+        question: " Q2) Deficiency of ... leads to night blindness:",
         options: ["a) vitamin K", "b) vitamin D", "c) vitamin A"],
         answer: 2
       },
       {
-        question: "Vit A&E Q3) Which of the following vitamin is required for healthy epithelium:",
+        question: " Q3) Which of the following vitamin is required for healthy epithelium:",
         options: ["a) vitamin E", "b) vitamin C", "c) vitamin A", "d) vitamin D"],
         answer: 2
       },
       {
-        question: "Vit A&E Q4) The avitaminosis of Vitamin A is named as:",
+        question: " Q4) The avitaminosis of Vitamin A is named as:",
         options: ["A. Beri Beri", "B. Addison's disease", "C. Osteomalacia", "D. Night blindness"],
         answer: 3
       },
       {
-        question: "Vit A&E Q5) Xerophthalmia occur due to deficiency of vitamin:",
+        question: " Q5) Xerophthalmia occur due to deficiency of vitamin:",
         options: ["a) A", "b) B12", "c) ascorbic acid", "d) calcitriol"],
         answer: 0
       },
       {
-        question: "Vit A&E Q6) Delay eruption of teeth due to deficiency of:",
+        question: " Q6) Delay eruption of teeth due to deficiency of:",
         options: ["a) vitamin A", "b) vitamin B1", "c) vitamin E", "d) vitamin k"],
         answer: 0
       },
       {
-        question: "Vit A&E Q7) The active form of vitamin A is:",
+        question: " Q7) The active form of vitamin A is:",
         options: ["a) tetra hydro folate", "b) calcitriol", "c) retinol", "d) TPP"],
         answer: 2
       },
       {
-        question: "Vit A&E Q8) ... Is a rich source of vitamin A:",
+        question: " Q8) ... Is a rich source of vitamin A:",
         options: ["a) cholesterol", "b) carotene", "c) rice", "d) orange"],
         answer: 1
       },
       {
-        question: "Vit A&E Q9) ... Is strong antioxidant:",
+        question: " Q9) ... Is strong antioxidant:",
         options: ["a) vitamin D", "b) vitamin B1", "c) vitamin E", "d) vitamin k"],
         answer: 2
       },
