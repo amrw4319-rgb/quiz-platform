@@ -1251,7 +1251,7 @@ const ExamsData = [
         question: "16. Ribosomal RNA is formed in:",
         options: ["heterochromatin", "euchromatin", "nucleolus", "Golgi apparatus", "Mitochondria"],
         answer: 2
-      }
+      },
       {
     "id": "carbohydrates_01",
     "section": "Carbohydrates",
