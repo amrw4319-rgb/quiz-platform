@@ -7,6 +7,7 @@
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- تأكد أن اسم الملف بحروف صغيرة style.css لحل مشكلة Vercel -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,21 +33,20 @@
         </div>
     </div>
 
-    <!-- 2. DASHBOARD / SUBJECT SELECTION SCREEN -->
+    <!-- 2. DASHBOARD / EXAM SELECTION SCREEN -->
     <div id="dashboardScreen" class="screen-view hidden">
         <header class="dashboard-header">
             <div>
                 <div class="badge-tag"><i class="fa-solid fa-hospital-user"></i> Candidate Dashboard</div>
                 <h1>Welcome back, <span id="displayStudentName" class="highlight-name">Student</span></h1>
-                <p class="quiz-subtitle">Select a medical subject to access its modules and practice exams.</p>
+                <p class="quiz-subtitle">Select an examination module to start your assessment.</p>
             </div>
             <button class="btn btn-outline btn-sm" onclick="changeProfile()">
                 <i class="fa-solid fa-user-pen"></i> Change Profile
             </button>
         </header>
 
-        <!-- Subjects Container -->
-        <div id="subjectsContainer" class="subjects-container"></div>
+        <div id="examsGrid" class="exams-grid"></div>
     </div>
 
     <!-- 3. QUIZ ENGINE SCREEN -->
@@ -124,6 +124,7 @@
 
 </div>
 
+<!-- تضمين الملفات السليمة -->
 <script src="exams.js"></script>
 <script src="script.js"></script>
 </body>
